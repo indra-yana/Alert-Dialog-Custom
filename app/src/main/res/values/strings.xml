@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AlertDialogCustom</string>
+    <string name="title_placeholder">Title</string>
+    <string name="description_placeholder">Description</string>
+
+    <string name="success_title">This is success dialog title</string>
+    <string name="warning_title">This is warning dialog title</string>
+    <string name="error_title">This is error dialog title</string>
+    <string name="input_title">This is input dialog title</string>
+    <string name="dummy_description">Lorem ipsum dolor shit amet naglek meta kongsi golonem king. Lorem ipsum dolor shit amet naglek meta kongsi golonem king</string>
+    <string name="confirm_ok">OK</string>
+    <string name="confirm_yes">Yes</string>
+    <string name="confirm_no">No</string>
+</resources>
