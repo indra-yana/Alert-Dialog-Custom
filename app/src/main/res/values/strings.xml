@@ -11,4 +11,5 @@
     <string name="confirm_ok">OK</string>
     <string name="confirm_yes">Yes</string>
     <string name="confirm_no">No</string>
+    <string name="text_try_me">Try me!</string>
 </resources>

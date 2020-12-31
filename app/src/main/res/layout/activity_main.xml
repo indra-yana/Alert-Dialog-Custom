@@ -6,41 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ScrollView
+    <RelativeLayout
+        android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFF">
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center|top"
+        android:background="@color/colorNeutral"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <ImageView
+            android:id="@+id/logo_img"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center|top">
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/logo_big" />
 
-            <ImageView
-                android:id="@+id/logo_img"
-                android:layout_width="180dp"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:contentDescription="@string/app_name"
-                android:src="@drawable/logo_big" />
+        <CheckBox
+            android:id="@+id/dark_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/logo_img"
+            android:layout_alignBottom="@+id/logo_img"
+            android:layout_toEndOf="@id/logo_img"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            android:text="Dark style"
+            android:textColor="@android:color/white" />
 
-            <CheckBox
-                android:id="@+id/dark_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/logo_img"
-                android:scaleX="0.8"
-                android:scaleY="0.8"
-                android:text="Dark style"
-                android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/layoutContainer1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/logo_img"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/layoutContainer2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/txt_0"
@@ -49,7 +67,7 @@
 
                 <Button
                     android:id="@+id/progress_dialog"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -60,7 +78,7 @@
 
                 <Button
                     android:id="@+id/basic_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -71,7 +89,7 @@
 
                 <Button
                     android:id="@+id/basic_test_without_buttons"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -82,7 +100,7 @@
 
                 <Button
                     android:id="@+id/under_text_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -92,7 +110,7 @@
 
                 <Button
                     android:id="@+id/styled_text_and_stroke"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -103,7 +121,7 @@
 
                 <Button
                     android:id="@+id/error_text_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -114,7 +132,7 @@
 
                 <Button
                     android:id="@+id/success_text_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -126,7 +144,7 @@
 
                 <Button
                     android:id="@+id/warning_confirm_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -137,7 +155,7 @@
 
                 <Button
                     android:id="@+id/warning_cancel_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -148,7 +166,7 @@
 
                 <Button
                     android:id="@+id/custom_img_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -159,7 +177,7 @@
 
                 <Button
                     android:id="@+id/neutral_btn_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -170,7 +188,7 @@
 
                 <Button
                     android:id="@+id/disabled_btn_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -181,7 +199,7 @@
 
                 <Button
                     android:id="@+id/custom_view_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -192,9 +210,22 @@
 
                 <Button
                     android:id="@+id/custom_btn_colors_test"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutContainer2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/layoutContainer1"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <!-- My Custom Layout -->
                 <TextView
@@ -204,7 +235,7 @@
 
                 <Button
                     android:id="@+id/custom_success_dialog"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -215,7 +246,7 @@
 
                 <Button
                     android:id="@+id/custom_warning_dialog"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -226,7 +257,7 @@
 
                 <Button
                     android:id="@+id/custom_error_dialog"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
@@ -237,14 +268,15 @@
 
                 <Button
                     android:id="@+id/custom_input_dialog"
-                    style="@style/dialog_blue_button"
+                    style="@style/dialog_red_button"
                     android:layout_margin="10dp"
                     android:text="Try me!" />
 
             </LinearLayout>
 
-        </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </ScrollView>
+
+    </androidx.core.widget.NestedScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
